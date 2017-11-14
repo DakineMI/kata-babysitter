@@ -63,8 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\BabysitterCalculator.cs" />
-    <Compile Include="Tests\BabysitterCalculatorTests.cs" />
+    <Compile Include="Source\Constants.cs" />
+    <Compile Include="Source\IPayRateCalculator.cs" />
+    <Compile Include="Source\DefaultPayRateCalculator.cs" />
+    <Compile Include="Tests\DefaultPayRateCalculatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
