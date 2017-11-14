@@ -75,6 +75,8 @@
     <Compile Include="PayRateCalculator\Tests\BedTimePayRateCalculatorTests.cs" />
     <Compile Include="PayRateCalculator\Tests\DefaultPayRateCalculatorTests.cs" />
     <Compile Include="WorkTypeEnum.cs" />
+    <Compile Include="WorkType\Source\WorkTypeHours.cs" />
+    <Compile Include="WorkType\Tests\WorkTypeHoursTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
