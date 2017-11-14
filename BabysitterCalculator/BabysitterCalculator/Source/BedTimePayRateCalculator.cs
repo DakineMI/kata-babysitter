@@ -1,12 +1,12 @@
 ﻿namespace BabysitterCalculator.Source
 {
     using System;
-
-    public class DefaultPayRateCalculator : IPayRateCalculator
+    
+    class BedTimePayRateCalculator : IPayRateCalculator
     {
         public decimal CalculatePay(int hoursWorked)
         {
-            return Math.Round(hoursWorked * Constants.DEFAULT_PAY_RATE, 2);
+            return Math.Round(hoursWorked * Constants.BEDTIME_PAY_RATE, 2);
         }
     }
 }
