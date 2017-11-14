@@ -67,6 +67,8 @@
     <Compile Include="Source\Constants.cs" />
     <Compile Include="Source\IPayRateCalculator.cs" />
     <Compile Include="Source\DefaultPayRateCalculator.cs" />
+    <Compile Include="Source\AfterMidnightPayRateCalculator.cs" />
+    <Compile Include="Tests\AfterMidnightPayRateCalculatorTests.cs" />
     <Compile Include="Tests\BedTimePayRateCalculatorTests.cs" />
     <Compile Include="Tests\DefaultPayRateCalculatorTests.cs" />
   </ItemGroup>
