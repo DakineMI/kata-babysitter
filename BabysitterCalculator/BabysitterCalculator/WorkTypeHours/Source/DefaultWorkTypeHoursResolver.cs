@@ -6,7 +6,7 @@
     {
         public Dictionary<WorkHourType, int> GetTheNumberOfHoursByWorkType(DateTime startTime, DateTime endTime, DateTime bedTime)
         {
-            if ((endTime - startTime).Seconds < 0)
+            if ((endTime - startTime).TotalSeconds < 0)
                 throw new ArgumentOutOfRangeException($"The end time must after the start time");
 
             var start = new DateTime(startTime.Year, startTime.Month, startTime.Day, startTime.Hour, 0, 0);
