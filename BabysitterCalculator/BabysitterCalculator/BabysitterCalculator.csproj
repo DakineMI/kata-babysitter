@@ -74,9 +74,14 @@
     <Compile Include="PayRateCalculator\Tests\AfterMidnightPayRateCalculatorTests.cs" />
     <Compile Include="PayRateCalculator\Tests\BedTimePayRateCalculatorTests.cs" />
     <Compile Include="PayRateCalculator\Tests\DefaultPayRateCalculatorTests.cs" />
+    <Compile Include="WorkTypeHourResolverEnum.cs" />
     <Compile Include="WorkTypeEnum.cs" />
-    <Compile Include="WorkType\Source\WorkTypeHours.cs" />
-    <Compile Include="WorkType\Tests\WorkTypeHoursTests.cs" />
+    <Compile Include="WorkTypeHours\Source\IWorkTypeHoursResolver.cs" />
+    <Compile Include="WorkTypeHours\Source\IWorkTypeHoursResolverFactory.cs" />
+    <Compile Include="WorkTypeHours\Source\WorkTypeHoursResolverFactory.cs" />
+    <Compile Include="WorkTypeHours\Source\DefaultWorkTypeHoursResolver.cs" />
+    <Compile Include="WorkTypeHours\Tests\WorkTypeHoursResolverFactoryTests.cs" />
+    <Compile Include="WorkTypeHours\Tests\WorkTypeHoursTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

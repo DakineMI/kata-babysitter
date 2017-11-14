@@ -1,8 +1,8 @@
-﻿namespace BabysitterCalculator.WorkType.Source
+﻿namespace BabysitterCalculator.WorkTypeHours.Source
 {
     using System;
     using System.Collections.Generic;
-    public class WorkTypeHours
+    public class DefaultWorkTypeHoursResolver : IWorkTypeHoursResolver
     {
         public Dictionary<WorkHourType, int> GetTheNumberOfHoursByWorkType(DateTime startTime, DateTime endTime, DateTime bedTime)
         {
@@ -25,7 +25,7 @@
             if (stop.Hour < 17 && stop.Hour > 4)
                 throw new ArgumentOutOfRangeException($"The end time must be between 5 PM and 4 AM");
             
-            Dictionary<WorkHourType, int> workTypeHours = new Dictionary<WorkHourType, int>();
+            Dictionary<WorkHourType, int> WorkTypeHours = new Dictionary<WorkHourType, int>();
 
             int bedTimeHours = 0;
             int defaultHours = 0;
@@ -53,11 +53,11 @@
                 afterMidnightHours = (stop - midnight).Hours;
             }
 
-            workTypeHours.Add(WorkHourType.Default, defaultHours);
-            workTypeHours.Add(WorkHourType.BedTime, bedTimeHours);
-            workTypeHours.Add(WorkHourType.AfterMidnight, afterMidnightHours);
+            WorkTypeHours.Add(WorkHourType.Default, defaultHours);
+            WorkTypeHours.Add(WorkHourType.BedTime, bedTimeHours);
+            WorkTypeHours.Add(WorkHourType.AfterMidnight, afterMidnightHours);
 
-            return workTypeHours;
+            return WorkTypeHours;
         }
     }
 }

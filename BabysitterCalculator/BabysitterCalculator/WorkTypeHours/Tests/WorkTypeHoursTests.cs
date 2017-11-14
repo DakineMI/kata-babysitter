@@ -1,11 +1,11 @@
-﻿namespace BabysitterCalculator.WorkType.Tests
+﻿namespace BabysitterCalculator.WorkTypeHours.Tests
 {
-    using FluentAssertions;
     using Source;
+    using FluentAssertions;
     using System;
     using Xunit;
 
-    public class WorkTypeHoursTests
+    public class DefaultWorkTypeHoursTests
     {
 
         [Fact]
@@ -15,7 +15,7 @@
             DateTime endTime = DateTime.Now.Date.AddMinutes(2);
             DateTime bedTime = DateTime.Now.Date.AddHours(-7);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(6, "The default billable time is from 6 till midnight");
@@ -30,7 +30,7 @@
             DateTime endTime = DateTime.Now.Date.AddMinutes(2);
             DateTime bedTime = DateTime.Now.Date.AddHours(-2);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(4, "The default billable time is from 6 till 10");
@@ -45,7 +45,7 @@
             DateTime endTime = DateTime.Now.Date.AddMinutes(-2);
             DateTime bedTime = DateTime.Now.Date.AddHours(-2);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(4, "The default billable time is from 6 till 10");
@@ -60,7 +60,7 @@
             DateTime endTime = DateTime.Now.Date.AddMinutes(-2);
             DateTime bedTime = DateTime.Now.Date.AddHours(-7);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(6, "The default billable time is from 6 till midnight");
@@ -75,7 +75,7 @@
             DateTime endTime = DateTime.Now.Date.AddMinutes(-5);
             DateTime bedTime = DateTime.Now.Date.AddMinutes(-2);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(6, "The default billable time is from 6 till midnight");
@@ -90,7 +90,7 @@
             DateTime endTime = DateTime.Now.Date.AddHours(4);
             DateTime bedTime = DateTime.Now.Date.AddHours(2);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(6, "The default billable time is from 6 till midnight");
@@ -105,7 +105,7 @@
             DateTime endTime = DateTime.Now.Date.AddHours(4);
             DateTime bedTime = DateTime.Now.Date.AddHours(2);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(0, "The default billable time is after midnight");
@@ -120,7 +120,7 @@
             DateTime endTime = DateTime.Now.Date.AddHours(2);
             DateTime bedTime = DateTime.Now.Date.AddHours(-6);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(0, "The default billable time starts at bedtime");
@@ -135,7 +135,7 @@
             DateTime endTime = DateTime.Now.Date.AddHours(-1);
             DateTime bedTime = DateTime.Now.Date.AddHours(-6);
 
-            var x = new WorkTypeHours();
+            var x = new DefaultWorkTypeHoursResolver();
 
             var result = x.GetTheNumberOfHoursByWorkType(startTime, endTime, bedTime);
             result[WorkHourType.Default].Should().Be(0, "The default billable time starts at bedtime");
