@@ -63,14 +63,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\BedTimePayRateCalculator.cs" />
-    <Compile Include="Source\Constants.cs" />
-    <Compile Include="Source\IPayRateCalculator.cs" />
-    <Compile Include="Source\DefaultPayRateCalculator.cs" />
-    <Compile Include="Source\AfterMidnightPayRateCalculator.cs" />
-    <Compile Include="Tests\AfterMidnightPayRateCalculatorTests.cs" />
-    <Compile Include="Tests\BedTimePayRateCalculatorTests.cs" />
-    <Compile Include="Tests\DefaultPayRateCalculatorTests.cs" />
+    <Compile Include="PayRateCalculator\Source\BedTimePayRateCalculator.cs" />
+    <Compile Include="PayRateCalculator\Source\Constants.cs" />
+    <Compile Include="PayRateCalculator\Source\IPayRateCalculator.cs" />
+    <Compile Include="PayRateCalculator\Source\DefaultPayRateCalculator.cs" />
+    <Compile Include="PayRateCalculator\Source\AfterMidnightPayRateCalculator.cs" />
+    <Compile Include="PayRateCalculator\Tests\AfterMidnightPayRateCalculatorTests.cs" />
+    <Compile Include="PayRateCalculator\Tests\BedTimePayRateCalculatorTests.cs" />
+    <Compile Include="PayRateCalculator\Tests\DefaultPayRateCalculatorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

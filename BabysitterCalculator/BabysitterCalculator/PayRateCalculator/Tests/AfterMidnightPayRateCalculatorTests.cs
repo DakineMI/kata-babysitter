@@ -1,9 +1,8 @@
-﻿
-namespace BabysitterCalculator.Tests
+﻿namespace BabysitterCalculator.PayRateCalculator.Tests
 {
+    using FluentAssertions;
     using Source;
     using Xunit;
-    using FluentAssertions;
 
     public class AfterMidnightPayRateCalculatorTests
     {

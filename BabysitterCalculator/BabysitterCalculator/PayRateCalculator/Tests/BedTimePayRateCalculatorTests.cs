@@ -1,4 +1,4 @@
-﻿namespace BabysitterCalculator.Tests
+﻿namespace BabysitterCalculator.PayRateCalculator.Tests
 {
     using Source;
     using Xunit;

@@ -1,4 +1,4 @@
-﻿namespace BabysitterCalculator.Source
+﻿namespace BabysitterCalculator.PayRateCalculator.Source
 {
     using System;
 
